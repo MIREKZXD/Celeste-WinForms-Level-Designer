@@ -1,4 +1,4 @@
-namespace Celeste_Forms_Level_Designer
+namespace Celeste_WinForms_Level_Designer
 {
     internal static class Program
     {

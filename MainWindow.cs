@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Celeste_Forms_Level_Designer
+namespace Celeste_WinForms_Level_Designer
 {
     public partial class MainWindow : Form
     {
@@ -52,10 +52,10 @@ namespace Celeste_Forms_Level_Designer
                 $"\r\nCameraFocus(\"{((player.Top + player.Height/2 < 432) ? "Top" : (player.Top + player.Height / 2 > gameScreen.Height - 432) ? "Bottom" : "Player")}\");";
 
             // Uložení souboru do zvoleného adresáøe
-            await File.WriteAllLinesAsync($"levely/Level{gameScreen.Tag}", output);
+            await File.WriteAllLinesAsync($"levely/Level{gameScreen.Tag}.txt", output);
 
             // Otevøení souboru
-            System.Diagnostics.Process.Start("notepad.exe", $"levely/Level{gameScreen.Tag}");
+            System.Diagnostics.Process.Start("notepad.exe", $"levely/Level{gameScreen.Tag}.txt");
         }
     }
 }
